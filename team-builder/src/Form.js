@@ -1,5 +1,5 @@
 import React from 'react';
-
+import App from "./App";
 
 function Form (props){
     const {name,age,role,onDataChange} = props;
@@ -7,7 +7,7 @@ function Form (props){
       <form>
         <label htmlFor='nameInput'>Name</label>
         <input
-          value={name}
+          value ={name}
            onChange={onDataChange}
           id='nameInput'
           type='text'
@@ -15,7 +15,7 @@ function Form (props){
   
         <label htmlFor='ageInput'>Age</label>
         <input
-          value={age}
+          value={name}
            onChange={onDataChange}
           id='ageInput'
           type='text'
@@ -23,7 +23,7 @@ function Form (props){
   
   <label htmlFor='roleInput'>Role</label>
         <input
-          value={role}
+          value={name}
            onChange={onDataChange}
           id='roleInput'
           type='text'

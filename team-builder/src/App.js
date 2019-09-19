@@ -19,14 +19,13 @@ function App() {
 
   const onDataChange = event => {
     event.preventDefault();
-    setTeamMembers({...teamMembers, [event.target.name]: event.target.value,[event.target.age]: event.target.value,
-      [event.target.role]: event.target.value })
+    setTeamMembers({...teamMembers, [event.target.name]: event.target.value })
   }
 
   return (
     <div className="App">
       <Form
-      onDataChange = {onDataChange}
+      onChange = {onDataChange}
       />
     </div>
   );
