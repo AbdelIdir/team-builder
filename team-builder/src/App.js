@@ -42,11 +42,17 @@ function App() {
   };
 
   const handleChange = event => {
+    if (/[A-Za-z]/g.test(event.target.value)) {
     setMembers({
       ...members,
       [event.target.name]: event.target.value
-    });
+    })};
   };
+
+
+  
+
+
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -74,9 +80,9 @@ function App() {
       <Form
         handleChange={handleChange}
         handleSubmit={handleSubmit}
-        members={members}
+        newmembers={members}
       />
-      {/* <MemberProfile members={members} /> */}
+      <MemberProfile members={members} />
       <SavedMembersList list={savedMembers} />
     </ContainDiv>
   );
