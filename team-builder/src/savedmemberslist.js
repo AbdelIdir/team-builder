@@ -8,7 +8,7 @@ export const SavedMembersList = props => {
     margin: 30px;
     background: black;
     color: white;
-    width: 200px;
+    width: 150px;
   `;
 
   return (
