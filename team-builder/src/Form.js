@@ -18,7 +18,7 @@ export const Form = props => {
         <input
           id="emailInput"
           name="Email"
-          type="text"
+          type="email"
           onChange={props.handleChange}
           value={props.newmembers.Email}
         />

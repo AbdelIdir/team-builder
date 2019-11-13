@@ -43,16 +43,12 @@ function App() {
 
   const handleChange = event => {
     if (/[A-Za-z]/g.test(event.target.value)) {
-    setMembers({
-      ...members,
-      [event.target.name]: event.target.value
-    })};
+      setMembers({
+        ...members,
+        [event.target.name]: event.target.value
+      });
+    }
   };
-
-
-  
-
-
 
   const handleSubmit = event => {
     event.preventDefault();
