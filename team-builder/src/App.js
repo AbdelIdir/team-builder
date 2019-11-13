@@ -7,14 +7,10 @@ import styled from "styled-components";
 
 const ContainDiv = styled.div`
   background: grey;
-height:1000px;
-width:100%;
-margin: 0 auto;
-padding:100px;
-
-
-
-
+  height: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px;
 `;
 function App() {
   const [members, setMembers] = useState([
@@ -56,7 +52,6 @@ function App() {
     event.preventDefault();
     alert("you just submitted");
     saveMember();
-
     setMembers([
       {
         Name: "",
@@ -65,12 +60,22 @@ function App() {
         Experience: "",
         Languages: ""
       }
-    ])
+    ]);
+
+    event.target.Name.value = "";
+    event.target.Email.value = "";
+    event.target.Role.value = "";
+    event.target.Experience.value = "";
+    event.target.Languages.value = "";
   };
 
   return (
     <ContainDiv>
-      <Form handleChange={handleChange} handleSubmit={handleSubmit} members={members} />
+      <Form
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        members={members}
+      />
       {/* <MemberProfile members={members} /> */}
       <SavedMembersList list={savedMembers} />
     </ContainDiv>
