@@ -6,6 +6,7 @@ export const Form = props => {
       <form className="form-styling" onSubmit={props.handleSubmit}>
         <label htmlFor="nameInput">Name</label>
         <input
+          value={props.members.Name}
           placeholder="type your name"
           id="nameInput"
           name="Name"
@@ -15,6 +16,7 @@ export const Form = props => {
 
         <label htmlFor="emailInput">Email</label>
         <input
+          value={props.members.Email}
           id="emailInput"
           name="Email"
           type="text"
@@ -23,6 +25,7 @@ export const Form = props => {
 
         <label htmlFor="roleInput">Role</label>
         <input
+          value={props.members.Role}
           id="roleInput"
           name="Role"
           type="text"
@@ -31,6 +34,7 @@ export const Form = props => {
 
         <label htmlFor="experienceInput">Experience</label>
         <input
+          value={props.members.Experience}
           id="experienceInput"
           name="Experience"
           type="text"
@@ -39,6 +43,7 @@ export const Form = props => {
 
         <label htmlFor="languagesInput">Languages</label>
         <input
+          value={props.members.Languages}
           id="languagesInput"
           name="Languages"
           type="text"

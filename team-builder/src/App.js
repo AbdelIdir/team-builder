@@ -3,7 +3,19 @@ import "./App.css";
 import { Form } from "./Form";
 import { MemberProfile } from "./MemberProfile";
 import { SavedMembersList } from "./savedmemberslist";
+import styled from "styled-components";
 
+const ContainDiv = styled.div`
+  background: grey;
+height:1000px;
+width:100%;
+margin: 0 auto;
+padding:100px;
+
+
+
+
+`;
 function App() {
   const [members, setMembers] = useState([
     {
@@ -44,14 +56,24 @@ function App() {
     event.preventDefault();
     alert("you just submitted");
     saveMember();
+
+    setMembers([
+      {
+        Name: "",
+        Email: "",
+        Role: "",
+        Experience: "",
+        Languages: ""
+      }
+    ])
   };
 
   return (
-    <div>
-      <Form handleChange={handleChange} handleSubmit={handleSubmit} />
-      <MemberProfile members={members} />
+    <ContainDiv>
+      <Form handleChange={handleChange} handleSubmit={handleSubmit} members={members} />
+      {/* <MemberProfile members={members} /> */}
       <SavedMembersList list={savedMembers} />
-    </div>
+    </ContainDiv>
   );
 }
 

@@ -13,13 +13,13 @@ export const SavedMembersList = props => {
 
   return (
     <>
-      <h3>Saved Members: </h3>
+      <h3>New Members to the company: </h3>
       {props.list.map(person => (
         <ListOfMembersDiv>
           <span className="saved-memeber">{person.Name}</span>
-          <p>{person.Email} </p>
-          <p>{person.Role}</p>
-          <p>{person.Experience}</p>
+          <p> {person.Email} </p>
+          <p> {person.Role}</p>
+          <p> {person.Experience}</p>
         </ListOfMembersDiv>
       ))}
       {/* <NavLink to="/">
