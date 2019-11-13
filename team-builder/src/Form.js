@@ -24,13 +24,17 @@ export const Form = props => {
         />
 
         <label htmlFor="roleInput">Role</label>
-        <input
+        <select
           id="roleInput"
           name="Role"
-          type="text"
           onChange={props.handleChange}
           value={props.newmembers.Role}
-        />
+        >
+          <option>Back End Engineer</option>
+          <option>Front End Dev</option>
+          <option>Full Stack Dev</option>
+          <option>Machine learning Engineer</option>
+        </select>
 
         <label htmlFor="experienceInput">Experience</label>
         <input
@@ -44,11 +48,12 @@ export const Form = props => {
         <label htmlFor="languagesInput">Languages</label>
         <input
           id="languagesInput"
-          name="Languages"
+          name="languages"
           type="text"
           onChange={props.handleChange}
-          value={props.newmembers.Languages}
+          value={props.newmembers.languages}
         />
+
         <button>Submit</button>
       </form>
     </div>

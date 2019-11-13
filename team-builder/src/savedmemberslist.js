@@ -6,13 +6,18 @@ import styled from "styled-components";
 export const SavedMembersList = props => {
   const ListOfMembersDiv = styled.div`
     margin: 30px;
-    background: black;
     color: white;
-    width: 150px;
+    width: 200px;
   `;
 
+  const ContainNewCards = styled.div`
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid red;
+  `;
   return (
-    <>
+    <ContainNewCards>
       <h3>New Members to the company: </h3>
       {props.list.map(person => (
         <ListOfMembersDiv>
@@ -20,11 +25,9 @@ export const SavedMembersList = props => {
           <p> {person.Email} </p>
           <p> {person.Role}</p>
           <p> {person.Experience}</p>
+          <p>{person.languages}</p>
         </ListOfMembersDiv>
       ))}
-      {/* <NavLink to="/">
-      <div className="home-button">Home</div>
-    </NavLink>{" "} */}
-    </>
+    </ContainNewCards>
   );
 };

@@ -19,7 +19,7 @@ function App() {
       Email: "",
       Role: "",
       Experience: "",
-      Languages: ""
+      languages: ""
     }
   ]);
 
@@ -29,7 +29,7 @@ function App() {
       Email: "",
       Role: "",
       Experience: "",
-      Languages: ""
+      languages: ""
     }
   ]);
 
@@ -42,14 +42,12 @@ function App() {
   };
 
   const handleChange = event => {
-    if (/[A-Za-z]/g.test(event.target.value)) {
-      setMembers({
-        ...members,
-        [event.target.name]: event.target.value
-      });
-    }
+    // if (/^[A-Za-z]+$/.test(event.target.value) || event.target.value === "") {
+    setMembers({
+      ...members,
+      [event.target.name]: event.target.value
+    });
   };
-
   const handleSubmit = event => {
     event.preventDefault();
     alert("you just submitted");
@@ -60,7 +58,7 @@ function App() {
         Email: "",
         Role: "",
         Experience: "",
-        Languages: ""
+        languages: ""
       }
     ]);
 
@@ -68,7 +66,7 @@ function App() {
     event.target.Email.value = "";
     event.target.Role.value = "";
     event.target.Experience.value = "";
-    event.target.Languages.value = "";
+    event.target.languages.value = "";
   };
 
   return (
